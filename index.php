@@ -12,6 +12,7 @@
 <link rel="stylesheet" type="text/css" media="all" href="styles.css">
 <link rel="stylesheet" type="text/css" media="all" href="styles_003.css">
 <link rel="stylesheet" type="text/css" media="all" href="claue_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
 
 <link rel="stylesheet" type="text/css" media="screen and (min-width: 768px)" href="styles-l.css">
 <link  rel="icon" type="image/x-icon" href="https://dahabmasr.com/media/favicon/default/logo_sca_only.png" />
@@ -61,12 +62,10 @@
 <h1 class="margin-bottom50">Investment Products Calculator</h1>
 
 </div>
-
+</div>
 </div>
 
-</div>
-
-<div class="col-des-6 col-tb-6 col-mb-12 margin-bottom30 order-des-1 calculate" style="margin-left: 400px;">
+<div class="col-des-6 col-tb-6 col-mb-12 margin-bottom30 order-des-1 calculate" >
 <div class="line">
 <div class="panel-block-row  panel-block col-des-12 block763 col-tb-12 col-mb-12">
 <div class="text-center">
@@ -96,14 +95,7 @@
 
 
 </select>
-
 </div>
-
-
-
-
-
-
 
 
 
@@ -114,16 +106,10 @@
 <select class="bottom5 asset-class-dd0 input" data-index="0" required="true" data-validate="{'required':true}" name="Product0" id="Product0" value="" tabindex="0">
 
 
-<option selected="selected" disabled="disabled">Select Product</option>
+<option selected="selected" disabled>Select Brand First</option>
 
 
 </select>
-
-
-
-
-
-
 </div>
 
 <div class="col-des-2 col-tb-2 col-mb-4 margin-bottom5  order-des-1">
@@ -151,43 +137,24 @@
 
 
 
-<button class="action btn btn-primary btn-sm" id="CalculatorSubmit" type="submit" title="Calculate" disabled="disabled">
+<button class="action btn btn-success btn-sm" id="CalculatorSubmit" type="submit" title="Calculate" disabled="disabled">
 
                     <span>Calculate</span>
 
 </button>
 
-<button class="add_form_field action btn btn-secondary btn-sm input">Add Another Product&nbsp; 
+<button class="add_form_field action btn btn-secondary btn-sm input">Add Product&nbsp; 
 
       <span style="font-size:16px; font-weight:bold;">+ </span>
     </button>	
 
-
-
-
-
 </div>
-
 </div>
-
-
-
-
-
 </div>
-
-
-
 </div>
-
 </div>
-
 </div>
-
 </div>
-
-
-
 
 
 <div class="col-des-12 col-tb-12 col-mb-12 margin-bottom30 order-des-2">
@@ -198,7 +165,7 @@
 
 <div>
 
-<div class="text-center">
+<div class="text-center" style="overflow-x:auto;">
 
 <h3 class="margin-bottom15">Your Investment Real-Time Value</h3>
 
@@ -206,14 +173,13 @@
 
 
 
-<table class="sub-title margin-bottom10 text-left calculator hidden-tb hidden-mb" border="1">
+<table class="sub-title margin-bottom10 text-left calculator" border="1">
 
 <thead>
 
 <tr>
 
 <th class="pastProduct text-center" colspan="6" width="50%">Your Buying price breakdown</th>
-
 <th class="currentproduct text-center" colspan="6" width="50%">Your Holdings Current Price</th>
 
 </tr>
@@ -221,11 +187,6 @@
 </thead>
 
 <tbody>
-
-
-
-
-
 
 
     <tr>
@@ -239,11 +200,8 @@
 <tr>
 
 <th>Unit Price Then</th>
-
 <th>One Gram Price Then</th>
-
 <th>Making Charge</th>
-
 <th>Total</th>
 
 </tr>
@@ -251,8 +209,6 @@
 </thead>
 
 <tbody>
-
-
 
 
 
@@ -271,11 +227,8 @@
 <tr>
 
 <th>Current Gram Price 21K</th>
-
 <th>Making charges refunded amount</th>
-
 <th>Total with the refunded making charges amount</th>
-
 <th>P/L</th>
 
 
@@ -287,12 +240,7 @@
 <tbody>
 
 
-
-
-
 </tbody>
-
-
 
 </table>
 
@@ -300,9 +248,6 @@
 
     </tr>
 
-	
-
-	
 
 </tbody>
 
@@ -311,19 +256,12 @@
     <tr>
 
       <td colspan="2"><strong>Total Spent</strong></td>
-
       <td colspan="1"><div id="totalSpent">0</div></td>
-
 	  <td colspan="2"><strong>Total Weight</strong></td>
-
       <td colspan="1"><div id="TotalWeight">0</div></td>
-
       <td colspan="2"><strong>Total Value</strong></td>
-
 	  <td colspan="1"><div id="totalIncome">0</div></td>
-
       <td colspan="2"><strong>Total P/L</strong></td>
-
       <td colspan="1"><div id="totalPLS">0</div></td>
 
 
@@ -333,17 +271,11 @@
   </tfoot>
 
 </table>
-
 </div>
-
 </div>
-
 </div>
-
 </div>
-
 </div>
-
 </div>
 
 <div class="col-des-12 col-tb-12 col-mb-12 margin-bottom30 order-des-2">
@@ -372,34 +304,17 @@ are not guarantees of future results. Dahab Masr
 
 
 </div>
-
 </div>
-
 </div>
-
 </div>
-
 </div>
-
 </div>
-
-
 </div>
-
 </div>
-
 </div>
-
-
-
 </div>
-
 </div>
-
 </div>
-
-  
-
 
     
 
@@ -413,9 +328,6 @@ are not guarantees of future results. Dahab Masr
         </script>
 <script type="text/javascript" src="require.js"></script>
 <script type="text/javascript" src="requirejs-config.js"></script>
-
-
-
 
 
 
@@ -464,11 +376,10 @@ var cashback = 0;
 var selectedcashback = 0;
 var Totalrevenue = 0;
 var TotalCurrent = 0;
-var max_fields = 15;
+var max_fields = 9;
 var wrapper = $(".assetList");
 var TablePast = $(".pastProduct-inner");
 var Tablecurrent = $(".currentProduct-inner");
-var DivTest = $("#calcs");
 var add_button = $(".add_form_field");
 var x = 0;
 var TotalBuy = 0;
@@ -476,93 +387,100 @@ var TotalCurr = 0;
 var totalPLS = 0;
 var PLTotal = 0;
 
-// Fetch Brands Name 
+function fetch_data(){
 
-$.getJSON("data.json", function(data) {
-  var recordid = '';
-    $.each(data, function(key, value) {
-      recordid += '<option value="'+ value.id +'">'+ value.name +'</option>';
-    });
-$(".brandsname"+x).append(recordid);
-});
+  // Fetch Brands Name
 
-// End Fetch
+  $.getJSON("data.json", function(data) {
+    var recordid = '';
+      $.each(data, function(key, value) {
+        recordid += '<option value="'+ value.id +'">'+ value.name +'</option>';
+      });
+  $(".brandsname"+x).append(recordid);
+  });
 
-// Fetch Data Using ID
 
-$(".product").change(function()
-{
-var brandID=$(this).val();
+  // Fetch Data Using ID
 
-// Fetch When Products = Brand ID
+  $(".brandsname"+ x).change(function()
+  {
+  var brandID=$(this).val();
 
-if(brandID == 1){
-  var recordid = '';
-  $.getJSON("swiss.json", function(data) {
-    $.each(data, function(key, value) {
+  // Fetch When Products = Brand ID
 
-        recordid += '<option value="'+ value.id +'" data-weight="'+ value.weight +'" data-weighteaw="'+ value.weighteaw +'"  data-mctetailtotal="'+ value.mctetailtotal +'" data-cashback="'+ value.cashback +'" data-ProductID="'+ value.productid +'" data-brandid="'+ value.brandid +'"data-brandName="'+ value.brandname +'">'+ value.product +'</option>';
-      
-    });
-    $(".asset-class-dd"+x).append(recordid);
-});
+  if(brandID == 1){
+    $(".asset-class-dd"+ x).empty();
+    var recordid = '';
+    $.getJSON("swiss.json", function(data) {
+      $.each(data, function(key, value) {
 
-// Fetch When Products = Brand ID
+          recordid += '<option value="'+ value.id +'" data-weight="'+ value.weight +'" data-weighteaw="'+ value.weighteaw +'"  data-mctetailtotal="'+ value.mctetailtotal +'" data-cashback="'+ value.cashback +'" data-ProductID="'+ value.productid +'" data-brandid="'+ value.brandid +'"data-brandName="'+ value.brandname +'">'+ value.product +'</option>';
+        
+      });
+      $(".asset-class-dd"+ x).append(recordid);
+  });
 
-}else if(brandID == 2){
-  $(".asset-class-dd"+x).empty();
-  var recordid = '';
-  $.getJSON("sam.json", function(data) {
-    $.each(data, function(key, value) {
-        recordid += '<option value="'+ value.id +'" data-weight="'+ value.weight +'" data-weighteaw="'+ value.weighteaw +'"  data-mctetailtotal="'+ value.mctetailtotal +'" data-cashback="'+ value.cashback +'" data-ProductID="'+ value.productid +'" data-brandid="'+ value.brandid +'"data-brandName="'+ value.brandname +'">'+ value.product +'</option>';
-      
-    });
-    $(".asset-class-dd"+x).append(recordid);
-});
+  // Fetch When Products = Brand ID
 
-// Fetch When Products = Brand ID
+  }else if(brandID == 2){
+    $(".asset-class-dd"+ x).empty();
+    var recordid = '';
+    $.getJSON("sam.json", function(data) {
+      $.each(data, function(key, value) {
+          recordid += '<option value="'+ value.id +'" data-weight="'+ value.weight +'" data-weighteaw="'+ value.weighteaw +'"  data-mctetailtotal="'+ value.mctetailtotal +'" data-cashback="'+ value.cashback +'" data-ProductID="'+ value.productid +'" data-brandid="'+ value.brandid +'"data-brandName="'+ value.brandname +'">'+ value.product +'</option>';
+        
+      });
+      $(".asset-class-dd"+ x).append(recordid);
+  });
 
-}else if(brandID == 3){
-  $(".asset-class-dd"+x).empty();
-  var recordid = '';
-  $.getJSON("selema.json", function(data) {
-    $.each(data, function(key, value) {
-        recordid += '<option value="'+ value.id +'" data-weight="'+ value.weight +'" data-weighteaw="'+ value.weighteaw +'"  data-mctetailtotal="'+ value.mctetailtotal +'" data-cashback="'+ value.cashback +'" data-ProductID="'+ value.productid +'" data-brandid="'+ value.brandid +'"data-brandName="'+ value.brandname +'">'+ value.product +'</option>';
-      
-    });
-    $(".asset-class-dd"+x).append(recordid);
-});
+  // Fetch When Products = Brand ID
 
-// Fetch When Products = Brand ID
+  }else if(brandID == 3){
+    $(".asset-class-dd"+ x).empty();
+    var recordid = '';
+    $.getJSON("selema.json", function(data) {
+      $.each(data, function(key, value) {
+          recordid += '<option value="'+ value.id +'" data-weight="'+ value.weight +'" data-weighteaw="'+ value.weighteaw +'"  data-mctetailtotal="'+ value.mctetailtotal +'" data-cashback="'+ value.cashback +'" data-ProductID="'+ value.productid +'" data-brandid="'+ value.brandid +'"data-brandName="'+ value.brandname +'">'+ value.product +'</option>';
+        
+      });
+      $(".asset-class-dd"+ x).append(recordid);
+  });
 
-}else if(brandID == 4){
-  $(".asset-class-dd"+x).empty();
-  var recordid = '';
-  $.getJSON("galla.json", function(data) {
-    $.each(data, function(key, value) {
-        recordid += '<option value="'+ value.id +'" data-weight="'+ value.weight +'" data-weighteaw="'+ value.weighteaw +'"  data-mctetailtotal="'+ value.mctetailtotal +'" data-cashback="'+ value.cashback +'" data-ProductID="'+ value.productid +'" data-brandid="'+ value.brandid +'"data-brandName="'+ value.brandname +'">'+ value.product +'</option>';
-      
-    });
-    $(".asset-class-dd"+x).append(recordid);
-});
+  // Fetch When Products = Brand ID
 
-// Fetch When Products = Brand ID
+  }else if(brandID == 4){
+    $(".asset-class-dd"+ x).empty();
+    var recordid = '';
+    $.getJSON("galla.json", function(data) {
+      $.each(data, function(key, value) {
+          recordid += '<option value="'+ value.id +'" data-weight="'+ value.weight +'" data-weighteaw="'+ value.weighteaw +'"  data-mctetailtotal="'+ value.mctetailtotal +'" data-cashback="'+ value.cashback +'" data-ProductID="'+ value.productid +'" data-brandid="'+ value.brandid +'"data-brandName="'+ value.brandname +'">'+ value.product +'</option>';
+        
+      });
+      $(".asset-class-dd"+ x).append(recordid);
+  });
 
-}else if(brandID == 5){
-  $(".asset-class-dd"+x).empty();
-  var recordid = '';
-  $.getJSON("btc.json", function(data) {
-    $.each(data, function(key, value) {
-        recordid += '<option value="'+ value.id +'" data-weight="'+ value.weight +'" data-weighteaw="'+ value.weighteaw +'"  data-mctetailtotal="'+ value.mctetailtotal +'" data-cashback="'+ value.cashback +'" data-ProductID="'+ value.productid +'" data-brandid="'+ value.brandid +'"data-brandName="'+ value.brandname +'">'+ value.product +'</option>';
-      
-    });
-    $(".asset-class-dd"+x).append(recordid);
-});
+  // Fetch When Products = Brand ID
+
+  }else if(brandID == 5){
+    $(".asset-class-dd"+ x).empty();
+    var recordid = '';
+    $.getJSON("btc.json", function(data) {
+      $.each(data, function(key, value) {
+          recordid += '<option value="'+ value.id +'" data-weight="'+ value.weight +'" data-weighteaw="'+ value.weighteaw +'"  data-mctetailtotal="'+ value.mctetailtotal +'" data-cashback="'+ value.cashback +'" data-ProductID="'+ value.productid +'" data-brandid="'+ value.brandid +'"data-brandName="'+ value.brandname +'">'+ value.product +'</option>';
+        
+      });
+      $(".asset-class-dd"+ x).append(recordid);
+  });
+  }
+  });
 }
+
+//Call Function To fetch
+
+fetch_data();
 
 // End Fetching Data
 
-});
 function checkInputs() {
   var isValid = true;
   $('input,select').filter('[required]').each(function() {
@@ -724,94 +642,11 @@ $("#totalPLS").html(PLTotal.toFixed(2));
         if (x < max_fields) {
             x++;
 
-            $(wrapper).append('<div class="col-des-12 col-tb-12 col-mb-12 margin-bottom5 appended'+ x +' order-des-1"><select class="margin-bottom5 input product brandsname'+ x +'" required="true" data-validate="{"required":true}" name="Brand'+ x +'" id="Brand'+ x +'" value="" tabindex="'+ x +'" data-index="'+ x +'" ><option selected="selected" disabled="disabled">Select Brand</option></select></div><div class="col-des-5 col-tb-5 col-mb-12 margin-bottom5 appended'+ x +' order-des-1"><select class="bottom5 asset-class-dd'+ x +' input" data-index="'+ x +'" required="true" name="Product'+ x +'" id="Product'+ x +'" value="" tabindex="'+ x +'" required><option selected="selected" disabled="disabled">Select Product</option></select></div><div class="col-des-2 col-tb-2 col-mb-4 margin-bottom5  appended'+ x +' order-des-1"><input  required class="margin-bottom5 input" type="text" placeholder="Qty" name="Qtys'+ x +'" id="Qtys'+ x +'" value="" tabindex="'+ x +'" maxlength="3"></div><div class="col-des-4 col-tb-4 col-mb-8 margin-bottom5  appended'+ x +' order-des-1"><input  required class="margin-bottom5 input" type="text" placeholder="Amount" name="Amount'+ x +'" id="Amount'+ x +'" value="" tabindex="'+ x +'" maxlength="8"></div><button class="delete col-des-1 col-tb-1 col-mb-1 margin-bottom5  appended'+ x +' order-des-1">X</button>');
+            $(wrapper).append('<div class="col-des-12 col-tb-12 col-mb-12 margin-bottom5 appended'+ x +' order-des-1"><select class="margin-bottom5 input product brandsname'+ x +'" required="true" data-validate="{"required":true}" name="Brand'+ x +'" id="Brand'+ x +'" value="" tabindex="'+ x +'" data-index="'+ x +'" ><option selected="selected" disabled="disabled">Select Brand</option></select></div><div class="col-des-5 col-tb-5 col-mb-12 margin-bottom5 appended'+ x +' order-des-1"><select class="bottom5 asset-class-dd'+ x +' input" data-index="'+ x +'" required="true" name="Product'+ x +'" id="Product'+ x +'" value="" tabindex="'+ x +'" required><option selected="selected" disabled>Select Brand First</option></select></div><div class="col-des-2 col-tb-2 col-mb-4 margin-bottom5  appended'+ x +' order-des-1"><input  required class="margin-bottom5 input" type="text" placeholder="Qty" name="Qtys'+ x +'" id="Qtys'+ x +'" value="" tabindex="'+ x +'" maxlength="3"></div><div class="col-des-4 col-tb-4 col-mb-8 margin-bottom5  appended'+ x +' order-des-1"><input  required class="margin-bottom5 input" type="text" placeholder="Amount" name="Amount'+ x +'" id="Amount'+ x +'" value="" tabindex="'+ x +'" maxlength="8"></div><button class="btn btn-outline-danger delete col-des-1 col-tb-1 col-mb-1 margin-bottom5  appended'+ x +' order-des-1">X</button>');
 
-            // Fetch Data Using ID in New Append
+            //Call Function To fetch
 
-            $(".product").change(function()
-            {
-            var brandID = $(this).val();
-            
-            // Fetch When Products = Brand ID
-            
-            if(brandID == 1){
-              $(".asset-class-dd"+x).empty();
-              var recordid = '';
-              $.getJSON("swiss.json", function(data) {
-                $.each(data, function(key, value) {
-
-                    recordid += '<option value="'+ value.id +'" data-weight="'+ value.weight +'" data-weighteaw="'+ value.weighteaw +'"  data-mctetailtotal="'+ value.mctetailtotal +'" data-cashback="'+ value.cashback +'" data-ProductID="'+ value.productid +'" data-brandid="'+ value.brandid +'"data-brandName="'+ value.brandname +'">'+ value.product +'</option>';
-                  
-                });
-                $(".asset-class-dd"+x).append(recordid);
-            });
-
-            // Fetch When Products = Brand ID
-
-            }else if(brandID == 2){
-              $(".asset-class-dd"+x).empty();
-              var recordid = '';
-              $.getJSON("sam.json", function(data) {
-                $.each(data, function(key, value) {
-                    recordid += '<option value="'+ value.id +'" data-weight="'+ value.weight +'" data-weighteaw="'+ value.weighteaw +'"  data-mctetailtotal="'+ value.mctetailtotal +'" data-cashback="'+ value.cashback +'" data-ProductID="'+ value.productid +'" data-brandid="'+ value.brandid +'"data-brandName="'+ value.brandname +'">'+ value.product +'</option>';
-                  
-                });
-                $(".asset-class-dd"+x).append(recordid);
-            });
-            
-            // Fetch When Products = Brand ID
-
-            }else if(brandID == 3){
-              $(".asset-class-dd"+x).empty();
-              var recordid = '';
-              $.getJSON("selema.json", function(data) {
-                $.each(data, function(key, value) {
-                    recordid += '<option value="'+ value.id +'" data-weight="'+ value.weight +'" data-weighteaw="'+ value.weighteaw +'"  data-mctetailtotal="'+ value.mctetailtotal +'" data-cashback="'+ value.cashback +'" data-ProductID="'+ value.productid +'" data-brandid="'+ value.brandid +'"data-brandName="'+ value.brandname +'">'+ value.product +'</option>';
-                  
-                });
-                $(".asset-class-dd"+x).append(recordid);
-            });
-
-            // Fetch When Products = Brand ID
-
-            }else if(brandID == 4){
-              $(".asset-class-dd"+x).empty();
-              var recordid = '';
-              $.getJSON("galla.json", function(data) {
-                $.each(data, function(key, value) {
-                    recordid += '<option value="'+ value.id +'" data-weight="'+ value.weight +'" data-weighteaw="'+ value.weighteaw +'"  data-mctetailtotal="'+ value.mctetailtotal +'" data-cashback="'+ value.cashback +'" data-ProductID="'+ value.productid +'" data-brandid="'+ value.brandid +'"data-brandName="'+ value.brandname +'">'+ value.product +'</option>';
-                  
-                });
-                $(".asset-class-dd"+x).append(recordid);
-            });
-
-            // Fetch When Products = Brand ID
-
-            }else if(brandID == 5){
-              $(".asset-class-dd"+x).empty();
-              var recordid = '';
-              $.getJSON("btc.json", function(data) {
-                $.each(data, function(key, value) {
-                    recordid += '<option value="'+ value.id +'" data-weight="'+ value.weight +'" data-weighteaw="'+ value.weighteaw +'"  data-mctetailtotal="'+ value.mctetailtotal +'" data-cashback="'+ value.cashback +'" data-ProductID="'+ value.productid +'" data-brandid="'+ value.brandid +'"data-brandName="'+ value.brandname +'">'+ value.product +'</option>';
-                  
-                });
-                $(".asset-class-dd"+x).append(recordid);
-            });
-            }
-
-            // End Fetching Data
-
-
-            // Fetch Brands Name in New Append
-
-            });
-            $.getJSON("data.json", function(data) {
-              var recordid = '';
-                $.each(data, function(key, value) {
-                  recordid += '<option value="'+ value.id +'">'+ value.name +'</option>';
-                });
-            $(".brandsname"+ x).append(recordid);
-            });
+            fetch_data();
 
             // End Fetch
 
@@ -831,20 +666,7 @@ $("#totalPLS").html(PLTotal.toFixed(2));
 
 
 }); //json
-
-
 }); //ready
-
-
-
-
-
-
-
-
-
-
-
 }); //function
 
 

@@ -381,3 +381,15 @@ header.page-header .active-sticky-mb .menu-wrapper {
 .category-image {
 	display: none;
 }
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%;
+	border: 1px solid #ddd;
+  }
+  
+  th, td {
+	text-align: left;
+	padding: 8px;
+  }
+  
