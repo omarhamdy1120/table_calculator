@@ -137,13 +137,13 @@
 
 
 
-<button class="action btn btn-success btn-sm" id="CalculatorSubmit" type="submit" title="Calculate" disabled="disabled">
+<button class="action btn btn-success btn-sm" type="submit" title="Calculate" disabled="disabled">
 
                     <span>Calculate</span>
 
 </button>
 
-<button class="add_form_field action btn btn-secondary btn-sm input">Add Product&nbsp; 
+<button class="add_form_field action btn btn-secondary btn-sm input"  disabled="disabled">Add Product&nbsp; 
 
       <span style="font-size:16px; font-weight:bold;">+ </span>
     </button>	
@@ -485,13 +485,13 @@ function checkInputs() {
   var isValid = true;
   $('input,select').filter('[required]').each(function() {
     if ($(this).val() === '' || $(this).val() === null) {
-      $('#CalculatorSubmit').prop('disabled', true)
+      $('.action').prop('disabled', true)
       isValid = false;
       return false;
     }
   });
 
-  if(isValid) {$('#CalculatorSubmit').prop('disabled', false)}
+  if(isValid) {$('.action').prop('disabled', false)}
   return isValid;
 }
 
@@ -500,12 +500,12 @@ function Calculate() {
   var isValid = true;
   $('input,select').filter('[required]').each(function() {
     if ($(this).val() === '' || $(this).val() === null) {
-      $('#CalculatorSubmit').prop('disabled', true)
+      $('.action').prop('disabled', true)
       isValid = false;
       return false;
     }
   });
-  if(isValid) {$('#CalculatorSubmit').prop('disabled', false)}
+  if(isValid) {$('.action').prop('disabled', false)}
   return isValid;
 }
 
@@ -562,10 +562,10 @@ $(document).on('change keyup click','.input', function (e) {
 checkInputs();
 });
 
-$(document).on('click','#CalculatorSubmit', function (e) {
+$(document).on('click','.action', function (e) {
 checkInputs();
 e.preventDefault();
-$('.delete').prop('disabled', true);
+$('.delete').prop('disabled', false);
 
 TotalWeight = 0;
 TotalWeightew = 0;
