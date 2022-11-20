@@ -116,7 +116,7 @@
 
 
 
-<input class="margin-bottom5 input" type="text" placeholder="Qty" data-validate="{required:true}" name="Qtys0" id="Qtys0" tabindex="4" maxlength="3" required="">
+<input class="margin-bottom5 input" type="text" placeholder="Quantity" data-validate="{required:true}" name="Qtys0" id="Qtys0" tabindex="4" maxlength="3" required="">
 
 </div>
 
@@ -124,7 +124,7 @@
 
 
 
-<input class="margin-bottom5 input" type="text" placeholder="Amount" data-validate="{required:true}" name="Amount0" id="Amount0" tabindex="5" maxlength="8" required="">
+<input class="margin-bottom5 input" type="text" placeholder="Unit Price" data-validate="{required:true}" name="Amount0" id="Amount0" tabindex="5" maxlength="8" required="">
 
 </div>
 </div>
@@ -137,13 +137,13 @@
 
 
 
-<button class="action btn btn-success btn-sm" type="submit" title="Calculate" disabled="disabled">
+<button class=" btn btn-success btn-sm" id ="action" type="submit" title="Calculate" disabled="disabled">
 
                     <span>Calculate</span>
 
 </button>
 
-<button class="add_form_field action btn btn-secondary btn-sm input"  disabled="disabled">Add Product&nbsp; 
+<button class="add_form_field btn btn-secondary btn-sm input" id="add" title="Add Another Product" disabled="disabled">Add Product&nbsp; 
 
       <span style="font-size:16px; font-weight:bold;">+ </span>
     </button>	
@@ -180,7 +180,7 @@
 <tr>
 
 <th class="pastProduct text-center" colspan="6" width="50%">Your Buying price breakdown</th>
-<th class="currentproduct text-center" colspan="6" width="50%">Your Holdings Current Price</th>
+<th class="currentProduct text-center" colspan="6" width="50%">Your Holdings Current Price</th>
 
 </tr>
 
@@ -198,7 +198,7 @@
 <thead>
 
 <tr>
-
+<th>Product</th>
 <th>Unit Price Then</th>
 <th>One Gram Price Then</th>
 <th>Making Charge</th>
@@ -257,10 +257,10 @@
 
       <td colspan="2"><strong>Total Spent</strong></td>
       <td colspan="1"><div id="totalSpent">0</div></td>
-	  <td colspan="2"><strong>Total Weight</strong></td>
+	    <td colspan="2"><strong>Total Weight</strong></td>
       <td colspan="1"><div id="TotalWeight">0</div></td>
       <td colspan="2"><strong>Total Value</strong></td>
-	  <td colspan="1"><div id="totalIncome">0</div></td>
+	    <td colspan="1"><div id="totalIncome">0</div></td>
       <td colspan="2"><strong>Total P/L</strong></td>
       <td colspan="1"><div id="totalPLS">0</div></td>
 
@@ -414,7 +414,7 @@ function fetch_data(){
     $.getJSON("swiss.json", function(data) {
       $.each(data, function(key, value) {
 
-          recordid += '<option value="'+ value.id +'" data-weight="'+ value.weight +'" data-weighteaw="'+ value.weighteaw +'"  data-mctetailtotal="'+ value.mctetailtotal +'" data-cashback="'+ value.cashback +'" data-ProductID="'+ value.productid +'" data-brandid="'+ value.brandid +'"data-brandName="'+ value.brandname +'">'+ value.product +'</option>';
+          recordid += '<option value="'+ value.id +'" data-weight="'+ value.weight +'" data-weighteaw="'+ value.weighteaw +'"  data-mctetailtotal="'+ value.mctetailtotal +'" data-cashback="'+ value.cashback +'" data-ProductID="'+ value.productid +'" data-ProductName="'+ value.product +'" data-brandid="'+ value.brandid +'"data-brandName="'+ value.brandname +'">'+ value.product +'</option>';
         
       });
       $(".asset-class-dd"+ x).append(recordid);
@@ -427,7 +427,7 @@ function fetch_data(){
     var recordid = '';
     $.getJSON("sam.json", function(data) {
       $.each(data, function(key, value) {
-          recordid += '<option value="'+ value.id +'" data-weight="'+ value.weight +'" data-weighteaw="'+ value.weighteaw +'"  data-mctetailtotal="'+ value.mctetailtotal +'" data-cashback="'+ value.cashback +'" data-ProductID="'+ value.productid +'" data-brandid="'+ value.brandid +'"data-brandName="'+ value.brandname +'">'+ value.product +'</option>';
+          recordid += '<option value="'+ value.id +'" data-weight="'+ value.weight +'" data-weighteaw="'+ value.weighteaw +'"  data-mctetailtotal="'+ value.mctetailtotal +'" data-cashback="'+ value.cashback +'" data-ProductID="'+ value.productid +'" data-ProductName="'+ value.product +'" data-brandid="'+ value.brandid +'"data-brandName="'+ value.brandname +'">'+ value.product +'</option>';
         
       });
       $(".asset-class-dd"+ x).append(recordid);
@@ -440,7 +440,7 @@ function fetch_data(){
     var recordid = '';
     $.getJSON("selema.json", function(data) {
       $.each(data, function(key, value) {
-          recordid += '<option value="'+ value.id +'" data-weight="'+ value.weight +'" data-weighteaw="'+ value.weighteaw +'"  data-mctetailtotal="'+ value.mctetailtotal +'" data-cashback="'+ value.cashback +'" data-ProductID="'+ value.productid +'" data-brandid="'+ value.brandid +'"data-brandName="'+ value.brandname +'">'+ value.product +'</option>';
+          recordid += '<option value="'+ value.id +'" data-weight="'+ value.weight +'" data-weighteaw="'+ value.weighteaw +'"  data-mctetailtotal="'+ value.mctetailtotal +'" data-cashback="'+ value.cashback +'" data-ProductID="'+ value.productid +'" data-ProductName="'+ value.product +'" data-brandid="'+ value.brandid +'"data-brandName="'+ value.brandname +'">'+ value.product +'</option>';
         
       });
       $(".asset-class-dd"+ x).append(recordid);
@@ -453,7 +453,7 @@ function fetch_data(){
     var recordid = '';
     $.getJSON("galla.json", function(data) {
       $.each(data, function(key, value) {
-          recordid += '<option value="'+ value.id +'" data-weight="'+ value.weight +'" data-weighteaw="'+ value.weighteaw +'"  data-mctetailtotal="'+ value.mctetailtotal +'" data-cashback="'+ value.cashback +'" data-ProductID="'+ value.productid +'" data-brandid="'+ value.brandid +'"data-brandName="'+ value.brandname +'">'+ value.product +'</option>';
+          recordid += '<option value="'+ value.id +'" data-weight="'+ value.weight +'" data-weighteaw="'+ value.weighteaw +'"  data-mctetailtotal="'+ value.mctetailtotal +'" data-cashback="'+ value.cashback +'" data-ProductID="'+ value.productid +'" data-ProductName="'+ value.product +'" data-brandid="'+ value.brandid +'"data-brandName="'+ value.brandname +'">'+ value.product +'</option>';
         
       });
       $(".asset-class-dd"+ x).append(recordid);
@@ -466,7 +466,7 @@ function fetch_data(){
     var recordid = '';
     $.getJSON("btc.json", function(data) {
       $.each(data, function(key, value) {
-          recordid += '<option value="'+ value.id +'" data-weight="'+ value.weight +'" data-weighteaw="'+ value.weighteaw +'"  data-mctetailtotal="'+ value.mctetailtotal +'" data-cashback="'+ value.cashback +'" data-ProductID="'+ value.productid +'" data-brandid="'+ value.brandid +'"data-brandName="'+ value.brandname +'">'+ value.product +'</option>';
+          recordid += '<option value="'+ value.id +'" data-weight="'+ value.weight +'" data-weighteaw="'+ value.weighteaw +'"  data-mctetailtotal="'+ value.mctetailtotal +'" data-cashback="'+ value.cashback +'" data-ProductID="'+ value.productid +'" data-ProductName="'+ value.product +'" data-brandid="'+ value.brandid +'"data-brandName="'+ value.brandname +'">'+ value.product +'</option>';
         
       });
       $(".asset-class-dd"+ x).append(recordid);
@@ -485,13 +485,13 @@ function checkInputs() {
   var isValid = true;
   $('input,select').filter('[required]').each(function() {
     if ($(this).val() === '' || $(this).val() === null) {
-      $('.action').prop('disabled', true)
+      $('#action,#add').prop('disabled', true)
       isValid = false;
       return false;
     }
   });
 
-  if(isValid) {$('.action').prop('disabled', false)}
+  if(isValid) {$('#action,#add').prop('disabled', false)}
   return isValid;
 }
 
@@ -500,12 +500,12 @@ function Calculate() {
   var isValid = true;
   $('input,select').filter('[required]').each(function() {
     if ($(this).val() === '' || $(this).val() === null) {
-      $('.action').prop('disabled', true)
+      $('#action,#add').prop('disabled', true)
       isValid = false;
       return false;
     }
   });
-  if(isValid) {$('.action').prop('disabled', false)}
+  if(isValid) {$('#action,#add').prop('disabled', false)}
   return isValid;
 }
 
@@ -562,7 +562,7 @@ $(document).on('change keyup click','.input', function (e) {
 checkInputs();
 });
 
-$(document).on('click','.action', function (e) {
+$(document).on('click','#action,#add', function (e) {
 checkInputs();
 e.preventDefault();
 $('.delete').prop('disabled', false);
@@ -577,13 +577,15 @@ for( var i = 0; i <= x; i++ ) {
 $('.rslt'+ i).remove();
 
 var ProductID =  parseInt($('select[name=Product'+ i +']').find('option:selected').val());
+var ProductName =  $('select[name=Product'+ i +']').find('option:selected').data('productname');
+var brandname =  $('select[name=Product'+ i +']').find('option:selected').data('brandname');
 var Qty =  parseInt($('input[name=Qtys'+ i +']').val());
 var Amount =  parseInt($('input[name=Amount'+ i +']').val());
 var weighteaw =  $('select[name=Product'+ i +']').find('option:selected').data('weighteaw');
 var weight =  $('select[name=Product'+ i +']').find('option:selected').data('weight');
 var selectedcashback =  $('select[name=Product'+ i +']').find('option:selected').data('cashback');
 var ProductMC =  $('select[name=Product'+ i +']').find('option:selected').data('mctetailtotal');
-var TotalProductweight = (weight * Qty);
+var TotalProductweight = (weighteaw * Qty);
 var TotalWeightew = (weighteaw * Qty);
 var cashback = (selectedcashback * Qty).toFixed(2);
 var oneProduct = (Amount / Qty);
@@ -615,7 +617,7 @@ if(totalPLS > 0){var color='green'}else{var color='red'}
 
 // Append Data in Tables 
 
-$(TablePast).append('<tr class="rslt'+ i +' asset_result" data-index="'+ i +'"><td><div id="AmountPerProduct'+ i +'">'+ Amount +'</div></td><td><div id="gramGoldPrice'+ i +'">'+ gramGoldPrice.toFixed(2)  +'</div></td><td><div id="mcTotal'+ i +'">'+  ProductMC  +'</div></td><td><div id="ProductTotal'+ i +'">'+ ProductTotal  +'</div></td></tr>');
+$(TablePast).append('<tr class="rslt'+ i +' asset_result" data-index="'+ i +'"><td><div id="ProductName'+ i +'">'+ brandname +' / '+ ProductName +'</div></td><td><div id="AmountPerProduct'+ i +'">'+ Amount +'</div></td><td><div id="gramGoldPrice'+ i +'">'+ gramGoldPrice.toFixed(2)  +'</div></td><td><div id="mcTotal'+ i +'">'+  ProductMC  +'</div></td><td><div id="ProductTotal'+ i +'">'+ ProductTotal  +'</div></td></tr>');
 
 $(Tablecurrent).append('<tr class="rslt'+ i +' asset_result" data-index="'+ i +'"><td><div id="Cur21Price'+ i +'">'+ CurrentSellPrice +'</div></td><td><div id="cashback'+ i +'">'+ selectedcashback +'</div></td><td><div id="Totalrevenue'+ i +'">'+ TotalWithCashBack.toFixed(2) +'</div></td><td><div class="'+ color +'" id="TotalPL'+ i +'">'+ totalPLS.toFixed(2) +'</div></td></tr>');
 
@@ -642,9 +644,9 @@ $("#totalPLS").html(PLTotal.toFixed(2));
         if (x < max_fields) {
             x++;
 
-            $(wrapper).append('<div class="col-des-12 col-tb-12 col-mb-12 margin-bottom5 appended'+ x +' order-des-1"><select class="margin-bottom5 input product brandsname'+ x +'" required="true" data-validate="{"required":true}" name="Brand'+ x +'" id="Brand'+ x +'" value="" tabindex="'+ x +'" data-index="'+ x +'" ><option selected="selected" disabled="disabled">Select Brand</option></select></div><div class="col-des-5 col-tb-5 col-mb-12 margin-bottom5 appended'+ x +' order-des-1"><select class="bottom5 asset-class-dd'+ x +' input" data-index="'+ x +'" required="true" name="Product'+ x +'" id="Product'+ x +'" value="" tabindex="'+ x +'" required><option selected="selected" disabled>Select Brand First</option></select></div><div class="col-des-2 col-tb-2 col-mb-4 margin-bottom5  appended'+ x +' order-des-1"><input  required class="margin-bottom5 input" type="text" placeholder="Qty" name="Qtys'+ x +'" id="Qtys'+ x +'" value="" tabindex="'+ x +'" maxlength="3"></div><div class="col-des-4 col-tb-4 col-mb-8 margin-bottom5  appended'+ x +' order-des-1"><input  required class="margin-bottom5 input" type="text" placeholder="Amount" name="Amount'+ x +'" id="Amount'+ x +'" value="" tabindex="'+ x +'" maxlength="8"></div><button class="btn btn-outline-danger delete col-des-1 col-tb-1 col-mb-1 margin-bottom5  appended'+ x +' order-des-1">X</button>');
+            $(wrapper).append('<div class="col-des-12 col-tb-12 col-mb-12 margin-bottom5 appended'+ x +' order-des-1"><select class="margin-bottom5 input product brandsname'+ x +'" required="true" data-validate="{"required":true}" name="Brand'+ x +'" id="Brand'+ x +'" value="" tabindex="'+ x +'" data-index="'+ x +'" ><option selected="selected" disabled="disabled">Select Brand</option></select></div><div class="col-des-5 col-tb-5 col-mb-12 margin-bottom5 appended'+ x +' order-des-1"><select class="bottom5 asset-class-dd'+ x +' input" data-index="'+ x +'" required="true" name="Product'+ x +'" id="Product'+ x +'" value="" tabindex="'+ x +'" required><option selected="selected" disabled>Select Brand First</option></select></div><div class="col-des-2 col-tb-2 col-mb-4 margin-bottom5  appended'+ x +' order-des-1"><input  required class="margin-bottom5 input" type="text" placeholder="Quantity" name="Qtys'+ x +'" id="Qtys'+ x +'" value="" tabindex="'+ x +'" maxlength="3"></div><div class="col-des-4 col-tb-4 col-mb-8 margin-bottom5  appended'+ x +' order-des-1"><input  required class="margin-bottom5 input" type="text" placeholder="Unit Price" name="Amount'+ x +'" id="Amount'+ x +'" value="" tabindex="'+ x +'" maxlength="8"></div><button class="btn btn-outline-danger delete col-des-1 col-tb-1 col-mb-1 margin-bottom5  appended'+ x +' order-des-1">X</button>');
 
-            //Call Function To fetch
+            // Call Function To fetch
 
             fetch_data();
 
